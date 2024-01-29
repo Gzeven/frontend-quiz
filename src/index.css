@@ -1,13 +1,103 @@
-body {
+@import-normalize;
+
+/* Regular font - Rubik Regular */
+@font-face {
+  font-family: 'Rubik';
+  src: url('../src//assets/fonts/static/Rubik-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Medium font - Rubik Medium */
+@font-face {
+  font-family: 'Rubik';
+  src: url('../src//assets/fonts/static/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Variable font - Rubik Variable */
+@font-face {
+  font-family: 'Rubik Variable';
+  src: url('../src//assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+  font-weight: 1 1000;
+  font-style: normal;
+  /* You can adjust font-weight values for variable fonts if needed */
+}
+
+/* Italic font - Rubik Italic */
+@font-face {
+  font-family: 'Rubik Italic';
+  src: url('../src//assets/fonts/static/Rubik-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Italic variable font - Rubik Italic Variable */
+@font-face {
+  font-family: 'Rubik Italic Variable';
+  src: url('../src//assets/fonts/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 1 1000;
+  font-style: italic;
+  /* You can adjust font-weight values for variable fonts if needed */
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Rubik', sans-serif; 
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 1440px;
+  background-color: #edf1f9;
+  margin: 0 auto;
+  
+}
+
+body.dark-theme {
+  background-color: #2d3949;
+}
+
+/* Apply different font styles using specific font-family names */
+.emphasize {
+  font-family: 'Rubik Variable', sans-serif; /* Variable font */
+  /* Other styles */
+}
+
+.italicize {
+  font-family: 'Rubik Italic', sans-serif; /* Italic font */
+  /* Other styles */
+}
+
+.emphasize-italic {
+  font-family: 'Rubik Italic Variable', sans-serif; /* Italic variable font */
+  /* Other styles */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --color-purple: hsl(277, 91%, 56%);
+  --color-dark-navy: hsl(216, 25%, 25%);;
+  --color-navy: hsl(215, 27%, 32%);;
+  --color-grey-navy: hsl(219, 13%, 44%);;
+  --color-light-bluish: hsl(216, 47%, 78%);;
+  --color-light-grey: hsl(220, 38%, 97%);
+  --color-pure-white: hsl(0, 0%, 100%);;
+  --color-green: hsl(151, 70%, 50%);;
+  --color-red: hsl(0, 82%, 63%);;
+
 }
