@@ -16,20 +16,20 @@ const ProgressBarContainer = styled.div`
   transition: color 1s ease-in-out;
   /* margin-top: 1.5rem; */
   border-radius: 999px;
-  padding: 4px;
+  padding: 0.25rem;
   @media only screen and (min-width: 768px) {
   /* margin-top: 2.5rem; */
 
   }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1024px) {
   /* margin-top: 11.25rem; */
   }
   
 `;
 
 const ProgressBarFill = styled.div<ProgressBarProps>`
-  height: 8px;
-  border-radius: 104px;
+  height: 0.5rem;
+  border-radius: 6.5rem;
   width: ${(props) => (props.$isProgressActive ? props.progress : 100)}%; /* Dynamically set the width based on progress */
   background-color: var(--color-purple);
   transition: ${(props) => (props.$isProgressActive ? 'width 10ms linear' : 'none')}; /* Control the transition */

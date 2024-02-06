@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import SubjectDisplay from './SubjectDisplay';
 import ConfettiExplosion from 'react-confetti-explosion';
 
-
-
-
 interface EndScreenProps {
   subject: string;
   score: number;
@@ -17,8 +14,8 @@ interface EndScreenProps {
 
 const EndScreenContainer = styled.div`
   text-align: left;
-  /* Add your styling for the end screen */
-  @media only screen and (min-width: 1440px) {
+  margin-bottom: 2rem;
+  @media only screen and (min-width: 1024px) {
  display: flex;
  justify-content: space-between;
  
@@ -40,9 +37,9 @@ const EndScreenMessage = styled.h1`
   transition: color 0.6s ease-in-out;
   margin-top: 2rem;
   @media only screen and (min-width: 768px) {
- font-size: 64px;
+ font-size: 4rem;
   }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1024px) {
  margin-top: 0;
   }
 `
@@ -57,13 +54,13 @@ const EndScreenSubMessage = styled.h2`
   font-weight: 800;
   margin-bottom: 2.5rem;
   @media only screen and (min-width: 768px) {
- font-size: 64px;
+ font-size: 4rem;
  
   }
 `
 
 const PlayerScore = styled.p`
-  font-size: 88px;
+  font-size: 5.5rem;
   font-family: 'Rubik';
 font-style: normal;
 font-weight: 500;
@@ -73,14 +70,14 @@ color: ${(props) => props.theme.textColorOne};
   -o-transition: color 0.6s ease-in-out;;
   transition: color 0.6s ease-in-out;
 @media only screen and (min-width: 768px) {
- font-size: 144px;
+ font-size: 9rem;
  
   }
 `
 
 
 const TotalScore = styled.p`
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: 'Rubik';
 font-style: normal;
 font-weight: 400;
@@ -90,7 +87,7 @@ color: ${(props) => props.theme.textColorTwo};
   -o-transition: color 0.6s ease-in-out;;
   transition: color 0.6s ease-in-out;
 @media only screen and (min-width: 768px) {
- font-size: 24px;
+ font-size: 1.5rem;
  
   }
 `
@@ -101,49 +98,50 @@ flex-direction: column;
 align-items: center;
 justify-content: space-between;
 box-shadow: 0px 16px 40px rgba(143, 160, 193, 0.14);
-border-radius: 12px;
+border-radius: 0.75rem;
 background: ${(props) => props.theme.backgroundTwo};
       -webkit-transition: background-color 1s ease-out;
   -moz-transition: background-color 1s ease-out;
   -o-transition: background-color 1s ease-out;
   transition: background-color 1s ease-out;
-  padding: 32px;
-  margin: 20px auto;
-  height: 242px;
+  padding: 2rem;
+  margin: 1.25rem auto;
+  height: 15.125rem;
   width: 100%;
   text-align: center;
   /* Additional styling for the box */
   @media only screen and (min-width: 768px) {
- height: 388px;
- padding: 48px;
- margin: 64px auto 32px;
- border-radius: 24px;
+ height: 24.25rem;
+ padding: 3rem;
+ margin: 4rem auto 2rem;
+ border-radius: 1.5rem;
   }
-  @media only screen and (min-width: 1440px) {
- width: 564px;
+  @media only screen and (min-width: 1024px) {
+ width: 35.25rem;
  margin-top: 0;
   }
 `;
 
 const PlayAgainButton = styled.button`
- height: 56px;
+ height: 3.5rem;
 font-family: 'Rubik';
 background: var(--color-purple);
 color: var(--color-pure-white);
-border-radius: 12px;
+border-radius: 0.75rem;
 border: none;
 font-weight: 500;
-font-size: 18px;
+font-size: 1.125rem;
 width: 100%;
+cursor:pointer;
 @media(hover: hover) and (pointer: fine) {
       &:hover {   
       background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #A729F5;    
     }
   }
   @media only screen and (min-width: 768px) {
-    height: 92px;
- font-size: 28px;
- border-radius: 24px;
+    height: 5.75rem;
+ font-size: 1.75rem;
+ border-radius: 1.5rem;
  
   }
 `
@@ -170,20 +168,7 @@ const EndScreen: React.FC<EndScreenProps> = ({
 
     }
   }, [score, totalQuestions]);
-  // useEffect(() => {
-  //   const handleKeyDown = (event: KeyboardEvent) => {
-  //     if (event.key === 'Enter') {
-  //       // Trigger the onPlayAgain function when Enter is pressed
-  //       onPlayAgain();
-  //     }
-  //   };
-
-  //   window.addEventListener('keydown', handleKeyDown);
-
-  //   return () => {
-  //     window.removeEventListener('keydown', handleKeyDown);
-  //   };
-  // }, [onPlayAgain]);
+  
 
   return (
     <EndScreenContainer>

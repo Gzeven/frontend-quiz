@@ -7,25 +7,24 @@ const ToggleSwitchContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px;
-  width: 80px;
+  width: 5rem;
   margin-left: auto;
   @media only screen and (min-width: 768px) {
-    width: 128px;
+    width: 8rem;
   }
 `;
 
 const ToggleContainer = styled.label`
   position: relative;
   display: inline-block;
-  width: 32px;
-  height: 20px;
-  background-color: purple;
-  border-radius: 30px;
+  width: 2rem;
+  height: 1.25rem;
+  background-color: var(--color-purple);
+  border-radius: 1.875rem;
   cursor: pointer;
   @media only screen and (min-width: 768px) {
-    width: 48px;
-  height: 28px;
+    width: 3rem;
+  height: 1.75rem;
   }
 `;
 
@@ -37,28 +36,28 @@ const ToggleInput = styled.input.attrs({ type: 'checkbox' })`
 
 const ToggleSlider = styled.span<{ checked: boolean }>`
   position: absolute;
-  top: 4px;
+  top: 0.25rem;
   left: ${(props) => (props.checked ? '16px' : '4px')};
-  width: 12px;
-  height: 12px;
-  border-radius: 30px;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 1.875rem;
   background-color: white;
   transition: 0.4s;
   @media only screen and (min-width: 768px) {
-    width: 20px;
-  height: 20px;
-  left: ${(props) => (props.checked ? '24px' : '4px')};
+    width: 1.25rem;
+  height: 1.25rem;
+  left: ${(props) => (props.checked ? '1.5rem' : '0.25rem')};
   }
 
 `;
 
 
 const ThemeImage = styled.img`
-  height: 16px;
-  width: 16px;
+  height: 1rem;
+  width: 1rem;
   @media only screen and (min-width: 768px) {
-    width: 24px;
-  height: 24px;
+    width: 1.5rem;
+  height: 1.5rem;
   }
 `;
 
@@ -91,7 +90,7 @@ const ThemeToggle = () => {
     <ToggleSwitchContainer>
         <ThemeImage src={dark ? SunLight : SunDark} alt="Sun" />
     <ToggleContainer onKeyDown={handleToggleKeyDown} tabIndex={0} >
-      <ToggleInput type="checkbox" checked={dark} onChange={toggleTheme} tabIndex={-1} />
+      <ToggleInput type="checkbox" checked={dark} onChange={toggleTheme} tabIndex={-1} role="switch" />
       <ToggleSlider checked={dark}  />
     </ToggleContainer>
     <ThemeImage src={dark ? MoonLight : MoonDark} alt="Moon" />

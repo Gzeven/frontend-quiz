@@ -13,20 +13,21 @@ padding-bottom: 9.5rem;
 @media only screen and (min-width: 768px) {
  padding-bottom: 3rem;
   }
- @media only screen and (min-width: 1440px) {
+ @media only screen and (min-width: 1024px) {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10.75rem;
+  gap: 2rem;
   }
 
 `;
 
 const QuizQuestionContainer = styled.div`
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   display: flex;
   flex-direction: column;
   gap: 7rem;
-  width: 465px;
+  width: 29.065rem;
   margin-bottom: 6rem;
   }
 
@@ -43,13 +44,13 @@ color: ${(props) => props.theme.textColorTwo};
   -o-transition: color 0.6s ease-in-out;;
   transition: color 0.6s ease-in-out;
 @media only screen and (min-width: 768px) {
-  font-size: 20px;
+  font-size: 1.25rem;
   }
 `;
 
 const QuestionText = styled.p`
 font-weight: 500;
-font-size: 20px;
+font-size: 1.25rem;
 color: ${(props) => props.theme.textColorOne};
 -webkit-transition: color 0.6s ease-in-out;;
   -moz-transition: color 0.6s ease-in-out;;
@@ -57,10 +58,10 @@ color: ${(props) => props.theme.textColorOne};
   transition: color 0.6s ease-in-out;
 margin: 0.75rem 0 1.5rem;
 @media only screen and (min-width: 768px) {
-  font-size: 36px;
+  font-size: 2.25rem;
 margin: 1.6875rem 0 2.5rem;
   }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1024px) {
 
 margin-top: 1.6875rem;
 height: 15rem;
@@ -76,8 +77,8 @@ gap: 0.75rem;
 margin-top: 4rem;
 gap: 1.5rem;
   }
-  @media only screen and (min-width: 1440px) {
-width: 564px;
+  @media only screen and (min-width: 1024px) {
+width: 35.25rem;
 margin-top: 0;
   }
 `;
@@ -102,23 +103,24 @@ const AnswerChoiceLetter = styled.span<{ $isSelected: boolean, $isCorrect: boole
     } else if (props.$answerSubmitted && props.$isSelected && props.$isCorrect) {
       return 'var(--color-pure-white)';
     } else {
-      return 'var(--color-navy-grey)';
+      return 'var(--color-grey-navy)';
     }
   }};
  
-  height: 40px;
-  min-width: 40px;
+  height: 2.5rem;
+  min-width: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
-  margin-right: 16px;
+  border-radius: 0.375rem;
+  margin-right: 1rem;
+
 
   @media only screen and (min-width: 768px) {
-    height: 56px;
-    width: 56px;
-    border-radius: 12px;
-margin-right: 32px;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 0.75rem;
+margin-right: 2rem;
   }
 `
 
@@ -137,14 +139,14 @@ const ChoiceButton = styled.button<{ fontSize: number, $isSelected: boolean, $is
   }};
 
 margin: 0;
-padding: 0 12px;
-height: 64px;
+padding: 0 0.75rem;
+height: 4rem;
 text-align: left;
 display: flex;
 justify-content: flex-start ;
 align-items: center;
 font-weight: 500;
-font-size: 18px;
+font-size: 1.125rem;
 font-family: 'Rubik';
 color: var(--color-dark-navy);
 background-color: ${(props) => props.theme.backgroundTwo};
@@ -153,7 +155,7 @@ background-color: ${(props) => props.theme.backgroundTwo};
   -o-transition: color 1s ease-in-out;;
   transition: color 1s ease-in-out;
 font-size: ${(props) => (props.fontSize > 600 ? '10px' : '18px')};
-border-radius: 6px;
+border-radius: 0.375rem;
 cursor: pointer;
 @media only screen and (min-width: 768px) {
   border: ${(props) => {
@@ -167,9 +169,9 @@ cursor: pointer;
       return 'none';
     }
   }};
- height: 80px;
- font-size: 28px;
- border-radius: 24px;
+ height: 5rem;
+ font-size: 1.75rem;
+ border-radius: 1.5rem;
   }
   @media(hover: hover) and (pointer: fine) {
     &:hover ${AnswerChoiceLetter} {
@@ -178,8 +180,8 @@ cursor: pointer;
   }
   }
 
-  @media only screen and (min-width: 1440px) {
- height: 92px;
+  @media only screen and (min-width: 1024px) {
+ height: 5.75rem;
   }
 `;
 
@@ -192,32 +194,32 @@ const ChoiceText = styled.p`
 `
 
 const CorrectImageContainer = styled.img`
-  height: 24px;
+  height: 1.5rem;
   margin-left: auto;
   @media only screen and (min-width: 768px) {
- height: 40px;
+ height: 2.5rem;
  
   }
 `
 
 const WrongImageContainer = styled.img`
-  height: 24px;
+  height: 1.5rem;
   margin-left: auto;
   @media only screen and (min-width: 768px) {
- height: 40px;
+ height: 2.5rem;
 
   }
 `
 
 const SubmitButton = styled.button`
-height: 56px;
+height: 3.5rem;
 font-family: 'Rubik';
 background: var(--color-purple);
 color: var(--color-pure-white);
-border-radius: 12px;
+border-radius: 0.75rem;
 border: none;
 font-weight: 500;
-font-size: 18px;
+font-size: 1.125rem;
 cursor:pointer;
 @media(hover: hover) and (pointer: fine) {
       &:hover {
@@ -226,21 +228,21 @@ cursor:pointer;
     }
     }
 @media only screen and (min-width: 768px) {
- height: 92px;
- font-size: 28px;
- border-radius: 24px;
+ height: 5.75rem;
+ font-size: 1.75rem;
+ border-radius: 1.5rem;
   }
 `;
 
 const NextButton = styled.button`
-height: 56px;
+height: 3.5rem;
 font-family: 'Rubik';
 background: var(--color-purple);
 color: var(--color-pure-white);
-border-radius: 12px;
+border-radius: 0.75rem;
 border: none;
 font-weight: 500;
-font-size: 18px;
+font-size: 1.125rem;
 cursor: pointer;
 
 @media(hover: hover) and (pointer: fine) {
@@ -250,9 +252,9 @@ cursor: pointer;
   }
 
 @media only screen and (min-width: 768px) {
- height: 92px;
- font-size: 28px;
- border-radius: 24px;
+ height: 5.75rem;
+ font-size: 1.75rem;
+ border-radius: 1.5rem;
   }
 `;
 
@@ -262,18 +264,18 @@ const SelectAnswerAttention = styled.p`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 1.125rem;
   @media only screen and (min-width: 768px) {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-top: 0.5rem;
   }
 `
 
 const SelectAnswerAttentionImage = styled.img`
-height: 24px;
+height: 1.5rem;
 margin-right: 0.5rem;
 @media only screen and (min-width: 768px) {
- height: 40px;
+ height: 2.5rem;
   }
 `
 
@@ -308,7 +310,6 @@ const Quiz = ({
   const [answerSubmitted, setAnswerSubmitted] = useState(false);
   const [shuffledQuestions, setShuffledQuestions] = useState<Question[]>([]);
   const [questionsReady, setQuestionsReady] = useState(false); // Track if questions are ready
-  const [focusedChoice, setFocusedChoice] = useState<number | null>(null);
   const [isProgressBarActive, setProgressBarActive] = useState(true);
   const progressBarProgress = (10 - timeLeft) * (100 / 10);
   const [playCorrectSound] = useSound(CorrectSound);
@@ -364,7 +365,7 @@ const Quiz = ({
       setTimeLeft((prevTime) => prevTime - 1);
     }, 1000);
 
-    if (timeLeft === 0) {
+    if (timeLeft === 0 && !answerSubmitted) {
       clearInterval(timer);
       playTimeUpSound();
       setAnswerSubmitted(true); // Mark answer as submitted
@@ -372,7 +373,7 @@ const Quiz = ({
     }
 
     return () => clearInterval(timer);
-  }, [timeLeft]);
+  }, [timeLeft, answerSubmitted, playTimeUpSound]);
 
 
   useEffect(() => {
@@ -407,46 +408,8 @@ const Quiz = ({
   };
 
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (!answerSubmitted && timeLeft > 0) {
-      switch (event.key) {
-        case 'ArrowUp':
-        case 'ArrowDown':
-          event.preventDefault();
-          handleArrowUpDown(event.key);
-          break;
-        case 'Enter':
-          handleEnterKey();
-          break;
-        case 'Tab':
-          event.preventDefault();
-          document.getElementById('submit-button')?.focus();
-          break;
-        default:
-          break;
-      }
-    }
-  };
-  
-  const handleArrowUpDown = (key: string) => {
-    const currentIndex = focusedChoice !== null ? focusedChoice : 0;
-    const newIndex =
-      key === 'ArrowUp'
-        ? Math.max(currentIndex - 1, 0)
-        : Math.min(currentIndex + 1, currentQuestion.options.length - 1);
-    setFocusedChoice(newIndex);
-  };
-  
-  const handleEnterKey = () => {
-    if (focusedChoice !== null) {
-      handleAnswer(currentQuestion.options[focusedChoice]);
-    } else {
-      handleSubmission();
-    }
-  };
-
   return (
-    <div onKeyDown={handleKeyDown} tabIndex={0} role="presentation">
+    <div >
       {questionsReady && currentQuestion && ( 
       <QuizContainer>
       <QuizQuestionContainer>
@@ -459,8 +422,7 @@ const Quiz = ({
       <ProgressBar progress={progressBarProgress} $isProgressActive={isProgressBarActive} />
             </QuizQuestionContainer>
     
-    
-    <AnswerChoices>
+    <AnswerChoices >  
     {currentQuestion.options.map((option, index) => (
   <ChoiceButton
   key={index}
@@ -473,9 +435,6 @@ const Quiz = ({
   style={{
     pointerEvents: answerSubmitted || timeLeft === 0 ? 'none' : 'auto',
   }}
-  tabIndex={focusedChoice === index ? 0 : -1} // Only allow focus for the selected choice
-  onFocus={() => setFocusedChoice(index)}
-  onBlur={() => setFocusedChoice(null)}
   
 >
         <AnswerChoiceLetter
