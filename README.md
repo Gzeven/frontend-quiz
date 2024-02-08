@@ -4,13 +4,15 @@ This is a solution to the [Frontend quiz app challenge on Frontend Mentor](https
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-- [Author](#author)
+- [Frontend Mentor - Frontend quiz app solution](#frontend-mentor---frontend-quiz-app-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+  - [Author](#author)
 
 ## Overview
 
@@ -50,6 +52,7 @@ Users should be able to:
 - [Typescript](https://www.typescriptlang.org/)
 - [Styled Components](https://styled-components.com/) - For styles
 - [Use Sound](https://www.npmjs.com/package/use-sound) - For playing sound
+- [React Confetti Explosion](https://www.npmjs.com/package/react-confetti-explosion) 
 
 ## Author
 
