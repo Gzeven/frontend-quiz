@@ -18,7 +18,6 @@ const EndScreenContainer = styled.div`
   @media only screen and (min-width: 1024px) {
  display: flex;
  justify-content: space-between;
- 
   }
 `;
 
@@ -29,8 +28,8 @@ const ConfettiContainer = styled.div`
 `
 
 const EndScreenMessage = styled.h1`
-    font-size: 2.5rem;
-    color: ${(props) => props.theme.textColorOne};
+  font-size: 2.5rem;
+  color: ${(props) => props.theme.textColorOne};
   -webkit-transition: color 0.6s ease-in-out;;
   -moz-transition: color 0.6s ease-in-out;;
   -o-transition: color 0.6s ease-in-out;;
@@ -45,8 +44,8 @@ const EndScreenMessage = styled.h1`
 `
 
 const EndScreenSubMessage = styled.h2`
-    font-size: 2.5rem;
-    color: ${(props) => props.theme.textColorOne};
+  font-size: 2.5rem;
+  color: ${(props) => props.theme.textColorOne};
   -webkit-transition: color 0.6s ease-in-out;;
   -moz-transition: color 0.6s ease-in-out;;
   -o-transition: color 0.6s ease-in-out;;
@@ -109,7 +108,7 @@ background: ${(props) => props.theme.backgroundTwo};
   height: 15.125rem;
   width: 100%;
   text-align: center;
-  /* Additional styling for the box */
+
   @media only screen and (min-width: 768px) {
  height: 24.25rem;
  padding: 3rem;

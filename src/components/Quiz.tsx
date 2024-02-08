@@ -7,7 +7,6 @@ import CorrectSound from '../assets/sounds/correct.mp3';
 import WrongSound from '../assets/sounds/wrong.mp3';
 import TimeUpSound from '../assets/sounds/timeup.mp3';
 
-
 const QuizContainer = styled.div`
 padding-bottom: 9.5rem;
 @media only screen and (min-width: 768px) {
@@ -19,7 +18,6 @@ padding-bottom: 9.5rem;
   padding-bottom: 10.75rem;
   gap: 2rem;
   }
-
 `;
 
 const QuizQuestionContainer = styled.div`
@@ -32,7 +30,6 @@ const QuizQuestionContainer = styled.div`
   }
 
 `
-
 const QuestionNumberInfo = styled.p`
  font-style: italic;
 font-weight: 400;
@@ -106,7 +103,6 @@ const AnswerChoiceLetter = styled.span<{ $isSelected: boolean, $isCorrect: boole
       return 'var(--color-grey-navy)';
     }
   }};
- 
   height: 2.5rem;
   min-width: 2.5rem;
   display: flex;
@@ -114,8 +110,6 @@ const AnswerChoiceLetter = styled.span<{ $isSelected: boolean, $isCorrect: boole
   align-items: center;
   border-radius: 0.375rem;
   margin-right: 1rem;
-
-
   @media only screen and (min-width: 768px) {
     height: 3.5rem;
     width: 3.5rem;
@@ -124,7 +118,7 @@ margin-right: 2rem;
   }
 `
 
-const ChoiceButton = styled.button<{ fontSize: number, $isSelected: boolean, $isCorrect: boolean, $isWrong: boolean, $answerSubmitted: boolean }>`
+const ChoiceButton = styled.button<{  $isSelected: boolean, $isCorrect: boolean, $isWrong: boolean, $answerSubmitted: boolean }>`
 
   border: ${(props) => {
     if (props.$answerSubmitted && props.$isWrong) {
@@ -154,7 +148,7 @@ background-color: ${(props) => props.theme.backgroundTwo};
   -moz-transition: color 1s ease-in-out;;
   -o-transition: color 1s ease-in-out;;
   transition: color 1s ease-in-out;
-font-size: ${(props) => (props.fontSize > 600 ? '10px' : '18px')};
+
 border-radius: 0.375rem;
 cursor: pointer;
 @media only screen and (min-width: 768px) {
@@ -231,7 +225,9 @@ cursor:pointer;
  height: 5.75rem;
  font-size: 1.75rem;
  border-radius: 1.5rem;
+ margin-top: 0.5rem;
   }
+
 `;
 
 const NextButton = styled.button`
@@ -255,7 +251,9 @@ cursor: pointer;
  height: 5.75rem;
  font-size: 1.75rem;
  border-radius: 1.5rem;
+ margin-top: 0.5rem;
   }
+
 `;
 
 const SelectAnswerAttention = styled.p`
@@ -321,7 +319,6 @@ const Quiz = ({
   useEffect(() => {
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
     setShuffledQuestions(shuffled);
-    // Set questions as ready when shuffled
   }, [questions]);
 
   useEffect(() => {
@@ -344,7 +341,7 @@ const Quiz = ({
   };
 
   const handleNextQuestion = () => {
-    setAnswerSubmitted(false); // Reset answer submission status
+    setAnswerSubmitted(false);
     setSelectedAnswer(null);
     setQuestionsReady(false);
     setProgressBarActive(true);
@@ -368,8 +365,7 @@ const Quiz = ({
     if (timeLeft === 0 && !answerSubmitted) {
       clearInterval(timer);
       playTimeUpSound();
-      setAnswerSubmitted(true); // Mark answer as submitted
-      // setSelectedAnswer(null);
+      setAnswerSubmitted(true); 
     }
 
     return () => clearInterval(timer);
@@ -426,7 +422,6 @@ const Quiz = ({
     {currentQuestion.options.map((option, index) => (
   <ChoiceButton
   key={index}
-  fontSize={option.length * 2}
   $isSelected={selectedAnswer === option}
   $answerSubmitted={answerSubmitted}
   $isCorrect={option === currentQuestion.answer}

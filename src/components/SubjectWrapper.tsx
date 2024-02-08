@@ -42,7 +42,7 @@ const SubjectButton = styled.button<{ $backgroundColor?: string }>`
   @media only screen and (min-width: 1024px) {
     height: 6rem;
     border-radius: 1.5rem;
-    padding: 0 2rem;
+    padding: 0 1.25rem;
   }
 `;
 

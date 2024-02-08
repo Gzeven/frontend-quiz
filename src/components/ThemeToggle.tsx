@@ -198,7 +198,7 @@ const ThemeToggle = () => {
     <ToggleSwitchContainer>
       <ThemeImage src={dark ? SunLight : SunDark} alt="Sun" />
       <ToggleContainer htmlFor="theme-toggle" onKeyDown={handleToggleKeyDown} tabIndex={0}>
-        <HiddenText>Toggle Dark Mode</HiddenText> {/* Descriptive text */}
+        <HiddenText>Toggle Dark Mode</HiddenText>
         <ToggleInput id="theme-toggle" type="checkbox" checked={dark} onChange={toggleTheme} tabIndex={-1} role="switch" aria-checked={dark} />
         <ToggleSlider checked={dark} />
       </ToggleContainer>
